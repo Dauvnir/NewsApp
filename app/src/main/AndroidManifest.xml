@@ -21,6 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ConnectedToDatabaseActivity"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>

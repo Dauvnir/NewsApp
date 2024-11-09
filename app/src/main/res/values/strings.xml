@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="welcome">Welcome to NewsWeek!</string>
+    <string name="welcomeMessage">Your daily dose of weekly news!</string>
+    <string name="login">Login</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="remember">Remember me</string>
+    <string name="forgot">Forgot a password?</string>
+    <string name="member">Not a member?</string>
+    <string name="account">Create account</string>
+    <string name="register">Register</string>
+    <string name="have_account">Have an account?</string>
+    <string name="re_password_hint">Re-password</string>
+    <string name="send_link">Send link</string>
+    <string name="back">Back</string>
+    <string name="old_password">Old password</string>
+    <string name="confirm">Confirm</string>
+    <string name="change_password">Change password</string>
+    <string name="delete_account">Delete account?</string>
+    <string name="change_email">Change email</string>
+
+    <string name="new_email">New email</string>
+    <string name="old_email">Old email</string>
+
 </resources>
