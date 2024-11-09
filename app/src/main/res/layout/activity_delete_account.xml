@@ -67,7 +67,7 @@
                 android:paddingEnd="10dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#CCFFFFFF"
-                android:textSize="32sp"
+                android:textSize="24sp"
                 android:visibility="visible"
                 tools:layout_editor_absoluteY="-16dp" />
 
@@ -131,7 +131,7 @@
                 android:paddingEnd="10dp"
                 android:textColor="#FFFFFF"
                 android:textColorHint="#CCFFFFFF"
-                android:textSize="32sp"
+                android:textSize="24sp"
                 android:visibility="visible"
                 app:layout_constraintTop_toTopOf="parent" />
 
