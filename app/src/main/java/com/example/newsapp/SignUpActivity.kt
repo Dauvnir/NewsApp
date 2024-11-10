@@ -95,8 +95,16 @@ class SignUpActivity: AppCompatActivity() {
                         editor.apply()
                     }
 
-                    val intent = Intent(this, ConnectedToDatabaseActivity::class.java)
-                    startActivity(intent)
+                    val firstUserLogin = sharedPreferences.getString("LANGUAGES", null)
+
+                    if(firstUserLogin != null){
+                        val intent = Intent(this, ConnectedToDatabaseActivity::class.java)
+                        startActivity(intent)
+                    }else{
+                        val intent = Intent(this, LanguageActivity::class.java)
+                        startActivity(intent)
+                    }
+
                 }else{
                     Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
                 }
@@ -108,8 +116,16 @@ class SignUpActivity: AppCompatActivity() {
         super.onStart()
         val autoLoginEnabled = sharedPreferences.getBoolean("AUTO_LOGIN", false)
         if(firebaseAuth.currentUser != null && autoLoginEnabled){
-            val intent = Intent(this, ConnectedToDatabaseActivity::class.java)
-            startActivity(intent)
+
+            val firstUserLogin = sharedPreferences.getString("LANGUAGES", null)
+
+            if(firstUserLogin != null){
+                val intent = Intent(this, ConnectedToDatabaseActivity::class.java)
+                startActivity(intent)
+            }else{
+                val intent = Intent(this, LanguageActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

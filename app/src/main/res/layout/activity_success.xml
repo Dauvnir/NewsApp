@@ -13,7 +13,7 @@
         android:clickable="true"
         android:contentDescription="@string/app_name"
         android:rotation="0"
-        android:scaleType="center"
+        android:scaleType="centerCrop"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

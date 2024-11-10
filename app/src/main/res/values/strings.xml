@@ -19,8 +19,29 @@
     <string name="change_password">Change password</string>
     <string name="delete_account">Delete account?</string>
     <string name="change_email">Change email</string>
-
+    <string name="next">Next</string>
     <string name="new_email">New email</string>
     <string name="old_email">Old email</string>
-
+    <string name="language">Choose languages:</string>
+    <string name="category">Choose category:</string>
+    <string name="Arabic">Arabic</string>
+    <string name="German">German</string>
+    <string name="English">English</string>
+    <string name="Spanish">Spanish</string>
+    <string name="French">French</string>
+    <string name="Hebrew">Hebrew</string>
+    <string name="Italian">Italian</string>
+    <string name="Dutch">Dutch</string>
+    <string name="Norwegian">Norwegian</string>
+    <string name="Portuguese">Portuguese</string>
+    <string name="Russian">Russian</string>
+    <string name="Swedish">Swedish</string>
+    <string name="Chinese">Chinese</string>
+    <string name="general">General</string>
+    <string name="business">Business</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="health">Health</string>
+    <string name="science">Science</string>
+    <string name="sports">Sports</string>
+    <string name="technology">Technology</string>
 </resources>
