@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    tools:context=".CategoryActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".CategoryActivity">
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
@@ -47,7 +48,7 @@
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_corners"
             android:backgroundTint="@color/white"
             android:padding="10dp"
@@ -62,7 +63,7 @@
             android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/rounded_corners"
             android:backgroundTint="@color/white"
             android:padding="10dp"

@@ -80,10 +80,9 @@ class CategoryActivity: AppCompatActivity() {
                 editor.putString("CATEGORY", convertedCategory)
                 editor.apply()
 
-                val intent = Intent(this, ConnectedToDatabaseActivity::class.java)
+                val intent = Intent(this, CountryActivity::class.java)
                 startActivity(intent)
 
-                println(convertedCategory)
             }else{
                 Toast.makeText(this, "Choose category.", Toast.LENGTH_SHORT).show()
             }
