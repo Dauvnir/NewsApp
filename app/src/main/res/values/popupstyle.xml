@@ -1,0 +1,9 @@
+<resources>
+    <style name="popupmystyle" parent="Widget.AppCompat.PopupMenu">
+        <!-- Background for the popup menu -->
+        <item name="android:popupBackground">@drawable/popup_corners</item>
+    </style>
+    <style name="overwritten" parent="Base.Theme.NewsApp">
+        <item name="android:textColor">@color/font</item>
+    </style>
+</resources>

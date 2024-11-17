@@ -26,7 +26,7 @@ class LanguageActivity: AppCompatActivity() {
         "Dutch" to "nl",
         "Norwegian" to "no",
         "Portuguese" to "pt",
-        "Swedish" to "se",
+        "Swedish" to "sv",
         "Chinese" to "zh"
     )
 
