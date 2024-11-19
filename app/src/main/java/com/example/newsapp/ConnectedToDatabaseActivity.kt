@@ -22,9 +22,6 @@ import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.newsapp.databinding.ActivitySuccessBinding
 import com.google.gson.Gson
-import com.google.gson.JsonArray
-import com.google.gson.JsonElement
-import com.google.gson.JsonObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
