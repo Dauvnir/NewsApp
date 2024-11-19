@@ -42,7 +42,7 @@ class ConnectedToDatabaseActivity: AppCompatActivity() {
         val categoryPref = sharedPreferences.getString("CATEGORY", null)?.replace(" ", "") ?: ""
 
         Log.d("values", "$languagePref, $countryPref, $categoryPref")
-//        fetchNews(categoryPref, languagePref, countryPref)
+        fetchNews(categoryPref, languagePref, countryPref)
 
         binding.imageButton.setOnClickListener{
             val themedContext = ContextThemeWrapper(this, R.style.overwritten) // Use the base theme
@@ -97,18 +97,35 @@ class ConnectedToDatabaseActivity: AppCompatActivity() {
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
                 if (response.isSuccessful) {
                     val newsList = response.body()
-
-
+                    val total = response.body()?.pagination?.total
                     if (newsList == null || newsList.data.isEmpty() ) {
                         Log.w("errorcon", "Received empty data list from API.")
                         Toast.makeText(this@ConnectedToDatabaseActivity, "No data received from server.", Toast.LENGTH_SHORT).show()
-                    } else {
-                        val jsonString = Gson().toJson(newsList)
-                        val newsResponse = Gson().fromJson(jsonString, NewsResponse::class.java)
+                    }else{
+                        if(total == 0){
+                            val constraintLayout = binding.linearLayout
+                            val textView = TextView(this@ConnectedToDatabaseActivity).apply {
+                                id = View.generateViewId()
+                                text = "Not New News"
+                                textSize = 18f
+                                gravity = Gravity.CENTER
+                                layoutParams = LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT
+                                ).apply {
+                                    gravity = Gravity.CENTER
+                                }
+                            }
+                            constraintLayout.addView(textView)
+                        }
+                        else {
+                            val jsonString = Gson().toJson(newsList)
+                            val newsResponse = Gson().fromJson(jsonString, NewsResponse::class.java)
 
-                        Log.d("jsonfile", jsonString)
-                        createElements(newsResponse)
-                        Log.d("errorcon", "Data successfully fetched and processed.")
+                            Log.d("jsonfile", jsonString)
+                            createElements(newsResponse)
+                            Log.d("errorcon", "Data successfully fetched and processed.")
+                        }
                     }
                 } else {
                     val statusCode = response.code()
